@@ -27,7 +27,7 @@ See the attached [`License.md`](./License.md) file.
 
 All training materials are available in markdown (`.md`) and (`.pdf`) format. To build the material from the sources (with the markdown (`.md`) files), you need the `rmarkdown`, `knitr` and `binb` R packages.
 
-To install the requirements, you can run the [`setup.R`](./setup.R) R script (e.g. with the command `Rscript build.R` or with `make setup` in a terminal).
+To install the requirements, you can run the [`setup.R`](./setup.R) R script (e.g. with the command `Rscript setup.R` or with `make setup` in a terminal).
 
 To build all `.pdf` files, you can run the [`build.R`](./build.R) R script (e.g. with the command `Rscript build.R` or with `make` in a terminal).
 
