@@ -1,0 +1,3 @@
+[submodule "K_Broman_tuto"]
+	path = K_Broman_tuto
+	url = https://github.com/kbroman/pkg_primer.git
