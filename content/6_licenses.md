@@ -1,8 +1,16 @@
 ---
-layout: page
 title: Software licenses
-description: Choose a license for your R package
+subtitle: Choose a license for your R package and it is very important
+institute: Montpellier Bio-Stat (https://groupes.renater.fr/wiki/montpellier-biostat)
+date: May 2021
+output: 
+  binb::metropolis:
+    includes:
+      in_header: ../latex_setup.sty
+classoption: "12pt"
 ---
+
+## 
 
 The last thing you need to do before your package is a _proper_ R
 package is to choose a license for your software and specify the
@@ -12,6 +20,8 @@ Software licenses are about two things: _copyright_, and _protecting
 yourself_ from being held liable if your software screws something up
 somewhere down the line.
 
+## 
+
 I know next to nothing about copyright law outside the United States,
 but in the US, [copyright](https://www.copyright.gov/circs/circ01.pdf)
 is _automatic_ (you don't need to write &ldquo;&copy; 2014
@@ -20,6 +30,8 @@ even once), and it gives you exclusive rights to copy your code. So if
 you don't choose a license for your software, _no one else can use it!_
 
 So, [pick a license, any license](https://blog.codinghorror.com/pick-a-license-any-license/).
+
+## 
 
 There are
 [lots of different software licenses](https://tldrlegal.com/) to
@@ -37,7 +49,7 @@ licensed under the GPL. So I use the GPL _if I have to_ (that is, if
 I've incorporated others' GPL code), and I use the MIT license
 otherwise.
 
-### Don't use a Creative Commons license for software
+## Don't use a Creative Commons license for software
 
 An important thing to remember: **don't use a
 [Creative Commons](https://creativecommons.org/) (CC) license for
@@ -51,7 +63,7 @@ videos, **but not software**. As
 Use CC licenses for your lecture notes, slides, and articles, but not
 for your software.
 
-### What about CC0?
+## What about CC0?
 
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) (public
 domain) seems appropriate for software: you're just saying that anyone
@@ -69,12 +81,12 @@ your lecture notes, slides, and web sites, but use a lenient license,
 like the [MIT license](https://en.wikipedia.org/wiki/MIT_License), for
 your software.
 
-### Indicating your choice in your package
+## Indicating your choice in your package
 
 So, pick a license, any license. And then indicate your choice in the
 `DESCRIPTION` file for your R package.
 
-#### GNU General Public License (GPLv3)
+## GNU General Public License (GPLv3)
 
 If you choose the GPL, note that there are multiple
 versions. [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html) is the old
@@ -84,12 +96,13 @@ some loopholes in the older one.
 
 To use the GPLv3 with your R package, include the following line in
 your `DESCRIPTION` file.
-
-    License: GPL-3
+```
+License: GPL-3
+```
 
 That's it.
 
-#### MIT license
+## MIT license
 
 If you're not incorporating code that is licensed under the GPL, I
 recommend going with the MIT license.
@@ -100,22 +113,27 @@ _template_ for a license. And so if you want to use the MIT license,
 you must include a `LICENSE` file in your package that includes just
 two lines,
 like this ([example here](https://github.com/kbroman/pkg_primer/tree/gh-pages/example/stage5/LICENSE)):
-
-    YEAR: 2014
-    COPYRIGHT HOLDER: Karl W Broman
+```
+YEAR: 2014
+COPYRIGHT HOLDER: Karl W Broman
+```
 
 See the license template at <https://www.r-project.org/Licenses/MIT>.
 
-Then, in your `DESCRIPTION` file, include the following line.
+##
 
-    License: MIT + file LICENSE
+Then, in your `DESCRIPTION` file, include the following line.
+```
+License: MIT + file LICENSE
+```
 
 The all caps `LICENSE` in that line is the name of the file (within
 your package) with the text about year and copyright holder. You can
 also call the file `LICENCE` if you want. In this case, the relevant
 line in your `DESCRIPTION` file should be the following.
-
-    License: MIT + file LICENCE
+```
+License: MIT + file LICENCE
+```
 
 (I'd thought that you could use a different name for the file, for
 example `License.txt`, but the
@@ -123,15 +141,18 @@ example `License.txt`, but the
 seems pretty explicit that the file should be either `LICENSE` or
 `LICENCE`.)
 
+## 
+
 With this, our package looks
 [like this](https://github.com/kbroman/pkg_primer/tree/gh-pages/example/stage5),
 and it is now a _proper R package_.
 
----
 
-### Homework
+## Homework
 
 Pick a license for your software, make the appropriate change to your
 `DESCRIPTION` file, and if necessary add a `LICENSE` file.
 
-Then go to the page about [checking an R package](check.html).
+## Next
+
+Then go to the page about [checking an R package](7_check.pdf).

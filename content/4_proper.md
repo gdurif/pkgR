@@ -1,9 +1,16 @@
 ---
-layout: page
 title: Making it a proper package
-description: How to turn a very basic R package into a proper
-             package.
+subtitle: How to turn a very basic R package into a proper package?
+institute: Montpellier Bio-Stat (https://groupes.renater.fr/wiki/montpellier-biostat)
+date: May 2021
+output: 
+  binb::metropolis:
+    includes:
+      in_header: ../latex_setup.sty
+classoption: "12pt"
 ---
+
+## Start point
 
 We created a usable package by just
 
@@ -19,7 +26,7 @@ more things.
 - Create a `NAMESPACE` file.
 - Add some documentation.
 
-### Filling out the `DESCRIPTION` file
+## Filling out the `DESCRIPTION` file
 
 Our `DESCRIPTION` file had just two lines. We need to add a few more:
 a title, a description, an author, and a maintainer (usually one of
@@ -43,7 +50,7 @@ A bunch more things can be put in the `DESCRIPTION` file, but this is
 sufficient for now.
 
 
-### Creating a `NAMESPACE` file
+## Creating a `NAMESPACE` file
 
 Creating a package `NAMESPACE` file has long been one of the more
 painful aspects of building an R package.
@@ -60,9 +67,10 @@ of naming conflicts.
 
 A minimal `NAMESPACE` file is pretty easy, though. You just need one
 line.
-
-    # Export all names
-    exportPattern(".")
+```
+# Export all names
+exportPattern(".")
+```
 
 Okay, that's two lines. But the first line is just a comment.
 
@@ -76,7 +84,7 @@ Your package will then look
 It's still not a _proper_ package (in that we still need to write some
 documentation), but you can now [build and install it with devtools](build.html).
 
-### Documentation
+## Documentation
 
 It's not a proper package until you've added documentation. The
 documentation will sit in a `man` subdirectory (`man` for
@@ -96,7 +104,7 @@ Roxygen2 will also create the `NAMESPACE` file for you.
 
 I'll [explain the use of Roxygen2 next](docs.html).
 
-### Software license
+## Software license
 
 And _actually_, there's one more thing (after the documentation) that
 you need to do before your package is _proper_. You need to pick a
@@ -104,13 +112,12 @@ license for the software and specify the license in the `DESCRIPTION`
 file. This is, perhaps, an even more ugly topic than `NAMESPACE`
 files. I'll [explain it a bit later](licenses.html).
 
-
----
-
-### Homework
+## Homework
 
 Fill out the `DESCRIPTION` file for your package and add a minimal
 `NAMESPACE` file. Try building and installing it with
 [devtools](https://github.com/hadley/devtools).
 
-Then go to the page about [writing documentation with Roxygen2](docs.html).
+## Next
+
+Then go to the page about [writing documentation with Roxygen2](5_docs.pdf).

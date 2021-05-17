@@ -1,7 +1,7 @@
 ---
 title: "Further resources"
 institute: Montpellier Bio-Stat (https://groupes.renater.fr/wiki/montpellier-biostat)
-date: \today
+date: May 2021
 description: Resources on constructing R packages.
 output:
   pdf_document:

@@ -1,8 +1,16 @@
 ---
-layout: page
 title: The minimal R package
-description: "First page on how to write an R package: constructing the simplest possible R package."
+subtitle: Constructing the simplest possible R package
+institute: Montpellier Bio-Stat (https://groupes.renater.fr/wiki/montpellier-biostat)
+date: May 2021
+output: 
+  binb::metropolis:
+    includes:
+      in_header: ../latex_setup.sty
+classoption: "12pt"
 ---
+
+## From your code...
 
 Let's start with a simple example:
 [a directory with 2 R files](https://github.com/kbroman/pkg_primer/tree/gh-pages/example/stage0).
@@ -13,6 +21,8 @@ Let's start with a simple example:
 - [`plot_crayons.R`](https://github.com/kbroman/pkg_primer/blob/gh-pages/example/stage0/plot_crayons.R)
   defines a function `plot_crayons()` for making a plot illustrating
   the crayon colors.
+
+## ...into an R package
 
 To make this code into an R package, we just need to do two things:
 
@@ -28,6 +38,8 @@ version number, like `0.1`, and then put those pieces in a
 file called `DESCRIPTION` in this specific way.
 
 [Here's the code rearranged in that way](https://github.com/kbroman/pkg_primer/tree/gh-pages/example/stage1).
+
+## and that's all
 
 Believe it or not, _that's all you need to have a working R package!_
 
@@ -56,10 +68,7 @@ the directory
 etc., even though this would really just be a single directory,
 `brocolors`, being modified over time.
 
-
----
-
-### A few asides
+## A few asides
 
 The functions above are taken from my [R/broman](https://github.com/kbroman/broman) package, which
 contains miscellaneous R functions that are useful to me.
@@ -79,9 +88,8 @@ Regarding version numbers: I number things like
 just `major.minor`. You should probably follow
 [Yihui's recommendation](https://yihui.name/en/2013/06/r-package-versioning/).)
 
----
 
-### Homework
+## Homework
 
 Now, take a couple of your own R functions
 
@@ -90,4 +98,6 @@ Now, take a couple of your own R functions
 - put your R functions into one or more `.R` files within the `R` subdirectory
 - write a minimal `DESCRIPTION` file
 
-Then go to the page about [building and installing an R package](build.html).
+## Next
+
+Then go to the page about [building and installing an R package](3_build.pdf).
