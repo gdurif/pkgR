@@ -3,7 +3,7 @@ default:
 	Rscript build.R
 
 .PHONY: setup
-default:
+setup:
 	Rscript setup.R
 
 .PHONY: clean
